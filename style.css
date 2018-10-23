@@ -5,6 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: #000;
 }
 
 h1 {
@@ -14,5 +15,22 @@ h1 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 8em;
     color: #fff;
-    -webkit-text-stroke: 2px #000;
+    -webkit-text-stroke: 3px #262626;
+    text-transform: uppercase;
+}
+
+h1:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    color: #FE9600;
+    white-space: nowrap;
+    transition: 1.5s;
+    overflow: hidden;
+}
+
+h1:hover:before {
+    width: 100%;
 }
